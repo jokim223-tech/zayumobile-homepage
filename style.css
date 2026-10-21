@@ -24,3 +24,8 @@
 .table-scroll:focus-visible{outline:3px solid #7014d9;outline-offset:4px}
 .tabs button,summary{min-height:44px}
 @media(max-width:640px){.comparison{padding:16px}.selection-actions>*{width:100%;margin:0}.toolbar label{min-width:0;flex-basis:calc(50% - 10px)}.toolbar label:has(#search){flex-basis:100%}.toolbar input,.toolbar select{width:100%;max-width:100%}.brand-hero>.wrap>*{min-width:0}}
+
+/* Ensure dynamically toggled comparison shortcut respects hidden state. */
+#compare-jump[hidden]{display:none!important}
+#compare-jump:not([hidden]){display:inline-flex;align-items:center;justify-content:center;margin:12px 0 18px;background:#7014d9;color:#fff;border-color:#7014d9;font-weight:800}
+@media(max-width:640px){#compare-jump:not([hidden]){display:flex;width:100%;min-height:48px;position:sticky;top:8px;z-index:5;box-shadow:0 4px 14px #29134425}}
