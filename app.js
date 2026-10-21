@@ -40,11 +40,9 @@ const kakaoSelected=$('#selected-kakao-link');
 if(kakaoSelected)kakaoSelected.addEventListener('click',async e=>{
  const p=plans.find(x=>x.id===selectedPlanId);
  if(!p){e.preventDefault();$('#status').textContent='먼저 요금제 목록에서 원하는 요금제를 선택해 주세요.';return;}
- e.preventDefault();
  try{
   await navigator.clipboard.writeText(selectedPlanText(p));
   $('#status').textContent='선택한 요금제 정보가 복사됐습니다. 카카오 상담창에 붙여넣어 전송해 주세요.';
-  window.open(kakaoSelected.href,'_blank','noopener,noreferrer');
  }catch{
   $('#status').textContent='자동 복사에 실패했습니다. 상담용 요금제 정보 복사 버튼을 이용하거나 선택 내용을 직접 복사해 주세요.';
  }
