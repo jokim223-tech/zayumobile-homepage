@@ -21,7 +21,7 @@ jobs:
       - name: Prepare static files
         run: |
           mkdir -p site
-          cp index.html style.css app.js config.js plans-data.js site/
+          cp index.html terms.html privacy.html style.css app.js config.js plans-data.js site/
           cp -R assets site/assets
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
