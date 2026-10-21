@@ -29,3 +29,7 @@
 #compare-jump[hidden]{display:none!important}
 #compare-jump:not([hidden]){display:inline-flex;align-items:center;justify-content:center;margin:12px 0 18px;background:#7014d9;color:#fff;border-color:#7014d9;font-weight:800}
 @media(max-width:640px){#compare-jump:not([hidden]){display:flex;width:100%;min-height:48px;position:sticky;top:8px;z-index:5;box-shadow:0 4px 14px #29134425}}
+
+/* Mobile comparison table and next-step navigation */
+.comparison-hint{font-size:13px;color:#526762;margin:10px 0 14px}.comparison-next{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 8px}.comparison-next .button{flex:1;min-width:200px}.comparison-next .kakao{background:#ffe700;color:#291344;border-color:#ffe700}.table-scroll{overflow-x:auto;overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch}
+@media(max-width:640px){.comparison-next{display:grid;grid-template-columns:1fr}.comparison-next .button{width:100%;min-width:0}.comparison-hint{font-weight:650}}
