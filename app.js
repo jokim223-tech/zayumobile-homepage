@@ -35,3 +35,17 @@ function updateSelectedPlan(id){const p=plans.find(p=>p.id===id);selectedPlanId=
 $('#cards').addEventListener('click',e=>{const link=e.target.closest('[data-select-plan]');if(link){updateSelectedPlan(link.dataset.selectPlan);$('#status').textContent='선택한 요금제를 확인했습니다. 상담용 정보 복사 또는 공식 셀프개통을 선택하세요.';}});
 $('#clear-plan').addEventListener('click',()=>updateSelectedPlan(null));
 $('#copy-plan').addEventListener('click',async()=>{const p=plans.find(p=>p.id===selectedPlanId);if(!p)return;try{await navigator.clipboard.writeText(selectedPlanText(p));$('#status').textContent='요금제 정보를 복사했습니다. 카카오 상담창에 붙여넣어 주세요.';}catch{$('#status').textContent='자동 복사가 안 됩니다. 위 선택 요금제 정보를 길게 눌러 직접 복사해 주세요.';}});
+
+const kakaoSelected=$('#selected-kakao-link');
+if(kakaoSelected)kakaoSelected.addEventListener('click',async e=>{
+ const p=plans.find(x=>x.id===selectedPlanId);
+ if(!p){e.preventDefault();$('#status').textContent='먼저 요금제 목록에서 원하는 요금제를 선택해 주세요.';return;}
+ e.preventDefault();
+ try{
+  await navigator.clipboard.writeText(selectedPlanText(p));
+  $('#status').textContent='선택한 요금제 정보가 복사됐습니다. 카카오 상담창에 붙여넣어 전송해 주세요.';
+  window.open(kakaoSelected.href,'_blank','noopener,noreferrer');
+ }catch{
+  $('#status').textContent='자동 복사에 실패했습니다. 상담용 요금제 정보 복사 버튼을 이용하거나 선택 내용을 직접 복사해 주세요.';
+ }
+});
