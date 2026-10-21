@@ -23,8 +23,6 @@ jobs:
           mkdir -p site
           cp index.html style.css app.js config.js plans-data.js site/
           cp -R assets site/assets
-          mkdir -p site/docs
-          cp docs/project-plan.html site/docs/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
