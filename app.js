@@ -18,13 +18,13 @@ $('#cards').addEventListener('change',e=>{if(!e.target.matches('[data-compare]')
 $('#clear-compare').addEventListener('click',()=>{chosen.clear();render();});
 $('#reset').addEventListener('click',()=>{network='all';$('#search').value='';$('#generation').value='all';$('#budget').value='999999';$('#sort').value='default';document.querySelectorAll('[data-network]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.network==='all')));render();});
 function attachLink(id,url,label){if(!url)return;let parsed;try{parsed=new URL(url);}catch{return;}if(parsed.protocol!=='https:'&&!(parsed.protocol==='http:'&&parsed.hostname==='pf.kakao.com'))return;const old=$(id),a=document.createElement('a');a.id=old.id;a.className=old.className;a.href=parsed.href;a.target='_blank';a.rel='noopener noreferrer';a.textContent=label;old.replaceWith(a);}
-attachLink('#self-link',cfg.selfActivationUrl,'공식 셀프개통 페이지 열기 ↗');attachLink('#kakao-link',cfg.kakaoUrl,'자유모바일 카카오 상담 ↗');render();
+attachLink('#self-link',cfg.selfActivationUrl,'공식 셀프개통 페이지 열기 ↗');attachLink('#kakao-link',cfg.kakaoUrl,'자유통신 카카오 상담 ↗');render();
 if(typeof module!=='undefined')module.exports={filtered,esc};
 
 // Keep the selected plan on this page; never append it to external URLs.
 let selectedPlanId=null;
 function selectedPlanText(p){return [
-'자유모바일 상담 요청',`${networkName(p)} / ${p.name}`,`월 ${money(p.price)} (부가세 포함)`,
+'자유통신 상담 요청',`${networkName(p)} / ${p.name}`,`월 ${money(p.price)} (부가세 포함)`,
 `데이터: ${p.data}`,`통화·문자: ${p.voice}`,
 p.additionalVoice?`영상·부가통화: ${p.additionalVoice}`:null,
 p.dataPromotionNote?`추가 데이터 안내: ${p.dataPromotionNote}`:null,
