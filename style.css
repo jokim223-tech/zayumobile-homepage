@@ -36,3 +36,41 @@
 
 /* Compact plan catalogue */
 #cards .card{padding:20px;box-shadow:none}#cards .card h3{min-height:0;margin:10px 0 6px;font-size:18px}#cards .price{font-size:27px;margin:0 0 8px}.plan-data{font-size:13px;margin:0 0 14px;color:var(--ink)}.plan-expand{margin-top:auto;padding:0;border-bottom:0;border-top:1px solid var(--line)}.plan-expand>summary{padding:14px 0 0;font-size:13px;line-height:1.6;min-height:44px}.plan-expand[open]>summary{padding-bottom:14px}.plan-body dl{border-top:0;padding-top:0}.plans-more{display:block;margin:22px auto 0;min-width:240px;min-height:48px;color:#6813c8;border-color:#c6a0ef}.plans-more[hidden]{display:none}@media(max-width:640px){#cards{gap:12px}#cards .card{padding:16px}#cards .card h3{font-size:17px}#cards .price{font-size:25px}.plan-data{margin-bottom:10px}}
+
+/* Quiet sections, clear choices, secondary information on demand. */
+.section{padding-top:48px;padding-bottom:48px}
+.section-lead{color:var(--muted);margin:-6px 0 26px;font-size:14px}
+.toolbar{align-items:center;gap:18px}
+.filter-more{border:0;padding:0;flex:1;min-width:180px}
+.filter-more>summary{display:flex;align-items:center;gap:12px;color:#6510c2;font-size:13px}
+.filter-more>summary::after{content:'＋';margin-left:auto}
+.filter-more[open]>summary::after{content:'−'}
+.filter-fields{display:flex;flex-wrap:wrap;align-items:end;gap:12px;padding-top:14px}
+.filter-fields label{flex:1;min-width:120px}
+.benefit-chips{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 16px}
+.benefit-chips span{background:white;border:1px solid #dfcef1;border-radius:24px;padding:10px 18px;font-size:14px;font-weight:650}
+.info-fold{background:#fff;border:1px solid var(--line);border-radius:12px;padding:0 20px;margin-top:20px}
+.info-fold>summary{padding:16px 0;line-height:1.6}
+.info-fold>summary small{display:block;font-weight:400;margin-top:4px}
+.info-fold[open]{padding-bottom:18px}
+.benefit-list p{display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line);padding:12px 0;margin:0;font-size:14px}
+.benefit-list span{color:var(--muted);text-align:right}
+.join-grid{gap:20px}.join-grid article{padding:28px}
+.join-grid h3{margin:10px 0}.join-grid p{line-height:1.8}
+.tablet-number{display:inline-block;font-size:20px;color:#7014d9;letter-spacing:1px;margin:8px 0}
+.selected-plan:not([data-plan-network="KT"]):not([data-plan-network="LG"]){display:none}
+.join-note{max-width:760px;margin:20px 0 0}
+#before-join{padding-top:0;padding-bottom:32px;border-top:0}
+#before-join>.info-fold{margin-top:0;background:#f6f2fa}
+#before-join .check-grid{margin-top:8px}
+#faq{padding-top:36px}
+#faq h2{font-size:26px}
+#faq details{background:white;padding:0 18px;border:1px solid var(--line);border-radius:10px;margin-bottom:10px}
+#faq summary{padding:14px 0;line-height:1.6;font-size:14px}
+#faq details p{margin:0 0 18px}
+.footer-details{max-width:700px;margin:16px 0}
+.footer-details summary{font-size:12px;color:var(--muted)}
+footer{display:grid;grid-template-columns:1fr auto;column-gap:32px;align-items:start}
+footer>.footer-brand-note,footer>.brand,footer>p,footer>.footer-details{grid-column:1}
+footer>a:last-child{grid-column:2;grid-row:2;font-size:12px}
+@media(max-width:640px){.section{padding-top:32px;padding-bottom:32px}.toolbar{gap:12px}.filter-more{width:100%;flex-basis:100%;border-top:1px solid #dfd0ee;padding-top:8px}.filter-fields{display:grid;grid-template-columns:1fr 1fr}.filter-fields label{min-width:0}.filter-fields .plain{align-self:end}.benefit-chips{gap:8px;margin:18px 0 12px}.benefit-chips span{padding:7px 12px;font-size:12px}.info-fold{padding-left:16px;padding-right:16px}.benefit-list p{display:block}.benefit-list span{display:block;text-align:left;margin-top:4px}.join-grid article{padding:22px}.join-grid{gap:14px}#before-join .check-grid{gap:10px}#before-join .check-grid article{padding:16px}#faq{gap:6px}#faq h2{font-size:25px;margin-bottom:16px}footer{display:block}.footer-details{margin-bottom:20px}}
